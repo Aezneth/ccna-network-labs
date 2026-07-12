@@ -106,7 +106,7 @@ explicitly denying one direction (Sales → HR):
 - **HR → Sales:** Requests timed out rather than being actively 
   rejected. The initial ICMP echo from HR was not blocked (it did not 
   match the source/destination pair in the ACL), but the reply from 
-  Sales — matching the denied source/destination pair — was blocked on 
+  Sales, matching the denied source/destination pair, was blocked on 
   its way back through G0/0.10. This demonstrates that a single deny 
   rule on the return path is sufficient to block a bidirectional 
   conversation such as ICMP.
@@ -114,7 +114,7 @@ explicitly denying one direction (Sales → HR):
 ## Troubleshooting Notes
 Port security initially showed zero learned addresses (`CurrentAddr: 0`) 
 despite correct configuration. This was resolved by generating traffic 
-from each PC — sticky MAC learning only populates once a frame is 
+from each PC, sticky MAC learning only populates once a frame is 
 actually received on the port, not at the moment the configuration is 
 applied.
 
