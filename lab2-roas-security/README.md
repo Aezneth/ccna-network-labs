@@ -10,12 +10,12 @@ departments.
 ## Topology
 ![Topology Diagram](topology.png)
 
-- **R1** — single physical interface (G0/0) as an 802.1Q trunk, with 
+- **R1**: single physical interface (G0/0) as an 802.1Q trunk, with 
   subinterfaces acting as the gateway for each VLAN
-- **SW1** — access switch with three VLANs, trunked to R1
-- **VLAN 10 (Sales)** — 192.168.10.0/26
-- **VLAN 20 (Marketing)** — 192.168.10.64/26
-- **VLAN 30 (HR)** — 192.168.10.128/26
+- **SW1**: access switch with three VLANs, trunked to R1
+- **VLAN 10 (Sales)**: 192.168.10.0/26
+- **VLAN 20 (Marketing)**: 192.168.10.64/26
+- **VLAN 30 (HR)**: 192.168.10.128/26
 
 ## Design Decisions
 - A single /24 was subnetted via VLSM into three /26 blocks rather 
