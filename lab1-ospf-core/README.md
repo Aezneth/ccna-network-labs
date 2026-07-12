@@ -70,8 +70,7 @@ The R1–R3 direct link (172.16.1.0/30) was administratively shut down
 to simulate a link failure:
 %LINK-5-CHANGED: Interface GigabitEthernet0/2, changed state to administratively down
 %OSPF-5-ADJCHG: Process 1, Nbr 3.3.3.3 on GigabitEthernet0/2 from FULL to DOWN
-During reconvergence, a ping from PC0 to PC5 showed brief packet loss 
-(25%, 1 of 4 packets) as OSPF recalculated the path through R2, then 
+During reconvergence, a ping from PC0 to PC5 showed, despite the interface being disabled, the network 
 stabilized with full connectivity restored via the R1–R2–R3 path. This 
 confirms the redundant topology provides automatic failover without 
 manual intervention.
